@@ -12,6 +12,7 @@ const Owner = db.define('owners', {
     name: Sequelize.STRING
 })
 
+//Sequelize Docs for Associations: https://sequelize.org/master/manual/assocs.html
 //1 to many relationship between cats and owners
 /*Cat.belongsTo(Owner); //set that Foreign Key on the cats table
 Owner.hasMany(Cat)*/
@@ -29,6 +30,10 @@ Cat.prototype.sayHello = function () { //instance method
 }
 
 //class method
+//In Sequelize we use special properties called "operators" to apply specific comparisions like "greater than" or "less than"
+//Docs: https://sequelizedocs.fullstackacademy.com/search-operators/
+//Important Note: Using the $ sign operators are deprecated in the new version of Sequelize 
+//so we have to use Sequelize's `Sequelize.Op` module
 Cat.getKittens = async function () {
     const kittens = await Cat.findAll({
         where: {
