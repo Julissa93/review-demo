@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const db = new Sequelize("postgres://localhost:5432/demo");
+const db = new Sequelize("postgres://julissa:root@localhost:5432/demo");
 
 const Cat = db.define('cats', {
     name: Sequelize.STRING,
