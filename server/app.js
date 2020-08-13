@@ -10,6 +10,11 @@ app.get('/', (req, res, next) => {
     res.send('<h1>Welcome to the main route!</h1>')
 })
 
+//Sequelize: Eager Loading
+//In SQL we have JOINS
+//In Sequelize JOINS go by the name of "eager loading"
+//Eager Loading === Joining two tables!
+
 app.get('/cats', async (req, res, next) => {
     try {
         //eager loading example: 
