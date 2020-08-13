@@ -13,3 +13,4 @@ To run this on your machine clone down this repo and run `npm install` then `npm
 ## Helpful Resources: 
 * [Sequelize Associations](https://sequelize.org/master/manual/assocs.html)
 * [Sequelize Search Operators (AKA how to add a WHERE w/ Sequelize)](https://sequelizedocs.fullstackacademy.com/search-operators/)
+* [Express Error Handling](https://expressjs.com/en/guide/error-handling.html)
