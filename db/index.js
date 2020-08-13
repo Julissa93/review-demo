@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const db = new Sequelize("postgres://localhost:5432/demo");
+const db = new Sequelize("postgres://julissa:root@localhost:5432/demo");
 
 const Cat = db.define('cats', {
     name: Sequelize.STRING,
@@ -12,29 +12,16 @@ const Owner = db.define('owners', {
     name: Sequelize.STRING
 })
 
+//Question: How do we make a 1 to 1 and a 1 to many relationship in Sequelize?
+//Where should our foreign key that connects Owners and Cats live?
+
+//1 to 1 relationship between cats and owners
+Cat.belongsTo(Owner)
+Owner.hasOne(Cat)
 //1 to many relationship between cats and owners
-/*Cat.belongsTo(Owner); //set that Foreign Key on the cats table
-Owner.hasMany(Cat)*/
 
 //Many to Many
-Cat.belongsToMany(Owner, {through: 'cats_owners'});
-Owner.belongsToMany(Cat, {through: 'cats_owners'});
 
-//instance methods && class methods
-
-Cat.prototype.sayHello = function () { //instance method
-    console.log(`${this.name} says meow`);
-}
-
-//class method
-Cat.getKittens = async function () {
-    const kittens = await Cat.findAll({
-        where: {
-            age: {[Op.lte]: 3}
-        }
-    })
-    return kittens;
-}
 
 module.exports = {
     db, Cat, Owner

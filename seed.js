@@ -27,10 +27,11 @@ const seed = async () => {
     name: "Owner3",
   });
 
-  console.log(cat1.__proto__); //displays magic methods!!!
-  cat1.setOwners(owner1);
-  cat2.setOwners(owner2);
-  cat3.setOwners(owner3);
+  console.log('magic methods', cat1.__proto__); //displays magic methods!!!
+  //How to set foreign key values -> Take advantage of magic methods! 
+  //cat1.setOwner(owner1); 
+  //cat2.setOwner(owner2);
+  //cat3.setOwner(owner3);
 
 };
 

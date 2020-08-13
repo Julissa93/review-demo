@@ -1,4 +1,13 @@
-# Review Demo From 5/1 
+# Express & Sequelize Rounding Out 
+
+## Agenda: 
+* Express Error Handling
+    * 404 Handler
+    * Customer Error Handler (other than 404)
+* Sequelize
+    - Eager Loading
+    - Class Methods & Instance Methods
+    - Many-Many Relationships
 
 To run this on your machine clone down this repo and run `npm install` then `npm start` to run the program. 
 
