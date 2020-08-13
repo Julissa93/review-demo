@@ -20,7 +20,9 @@ Owner.hasMany(Cat)*/
 Cat.belongsToMany(Owner, {through: 'cats_owners'});
 Owner.belongsToMany(Cat, {through: 'cats_owners'});
 
-//instance methods && class methods
+//Instance methods && Class methods
+//A convenient way to add functionality to your Sequelize models
+//REMEMBER: It's just JavaScript so we can add functions to the constructor function or its prototype. 
 
 Cat.prototype.sayHello = function () { //instance method
     console.log(`${this.name} says meow`);
