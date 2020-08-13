@@ -36,5 +36,4 @@ app.get('/owners', async (req, res, next) => {
 //500 level errors - 500/502
 
 
-
 app.listen(PORT, () => console.log(`Server is listening on ${PORT}`))
