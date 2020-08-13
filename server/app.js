@@ -29,6 +29,9 @@ app.get('/owners', async (req, res, next) => {
     }
 })
 
+
+//Express Error Handling
+//this will get invoked from the catch block within your express route handler!
 //errors I should handle: 
 //400 level errors - 404
 //500 level error - 500/502
