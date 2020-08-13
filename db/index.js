@@ -22,8 +22,7 @@ const Owner = db.define('owners', {
 //Many to Many
 
 //Class Methods && Instance Methods
-//A convenient way to add functionality to your Sequelize models
-//REMEMBER: It's just JavaScript so we can add functions to the constructor function or its prototype. 
+
 
 
 module.exports = {
