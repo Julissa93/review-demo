@@ -16,8 +16,7 @@ const Owner = db.define('owners', {
 //Where should our foreign key that connects Owners and Cats live?
 
 //1 to 1 relationship between cats and owners
-Cat.belongsTo(Owner)
-Owner.hasOne(Cat)
+
 //1 to many relationship between cats and owners
 
 //Many to Many
