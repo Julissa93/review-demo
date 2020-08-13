@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const db = new Sequelize("postgres://julissa:root@localhost:5432/demo");
+const db = new Sequelize("postgres://localhost:5432/demo");
 
 const Cat = db.define('cats', {
     name: Sequelize.STRING,
@@ -20,6 +20,10 @@ const Owner = db.define('owners', {
 //1 to many relationship between cats and owners
 
 //Many to Many
+
+//Class Methods && Instance Methods
+//A convenient way to add functionality to your Sequelize models
+//REMEMBER: It's just JavaScript so we can add functions to the constructor function or its prototype. 
 
 
 module.exports = {

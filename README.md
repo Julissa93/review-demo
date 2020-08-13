@@ -3,7 +3,7 @@
 ## Agenda: 
 * Express Error Handling
     * 404 Handler
-    * Customer Error Handler (other than 404)
+    * Customer Error Handler (kicks in when you use `next(error)`)
 * Sequelize
     - Eager Loading
     - Class Methods & Instance Methods
