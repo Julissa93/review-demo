@@ -8,6 +8,7 @@
     - Eager Loading
     - Class Methods & Instance Methods
     - Many-Many Relationships
+    
 To run this on your machine clone down this repo and run `npm install` then `npm start` to run the program. 
 
 ## Helpful Resources: 
