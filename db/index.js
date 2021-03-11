@@ -3,12 +3,12 @@ const Op = Sequelize.Op;
 
 const db = new Sequelize("postgres://julissa:root@localhost:5432/demo");
 
-const Cat = db.define('cats', {
+const Cat = db.define('cat', {
     name: Sequelize.STRING,
     age: Sequelize.INTEGER
 })
 
-const Owner = db.define('owners', {
+const Owner = db.define('owner', {
     name: Sequelize.STRING
 })
 
