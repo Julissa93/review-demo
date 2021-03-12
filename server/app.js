@@ -25,6 +25,16 @@ app.get('/cats', async (req, res, next) => {
     }
 })
 
+app.get('/kittens', async (req, res, next) => {
+    try {
+        const kittens = await Cat.getKittens()
+        console.log('kittens: ', kittens)
+        res.send(kittens)
+    } catch (err) {
+        next(err)
+    }
+})
+
 app.get('/owners', async (req, res, next) => {
     try {
         const owners = await Owner.findAll({include: Cat})
