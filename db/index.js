@@ -12,7 +12,7 @@ const Owner = db.define('owner', {
     name: Sequelize.STRING
 })
 
-//Question: How do we make a 1 to 1 and a 1 to many relationship in Sequelize?
+//Question: How can we make a 1 to 1 and a 1 to many relationship in Sequelize?
 //Where should our foreign key that connects Owners and Cats live?
 
 //1 to 1 relationship between cats and owners
